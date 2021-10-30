@@ -35,7 +35,7 @@ class AddMealForm extends Component {
         }
       );
     } catch (e) {
-      toast.error("Sikertelen hozzáadás!", {
+      toast.error("Étel hozzáadása sikertelen!", {
         position: "top-left",
       });
     }

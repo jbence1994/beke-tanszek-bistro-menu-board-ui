@@ -26,7 +26,7 @@ class AddTypeForm extends Component {
         position: "top-left",
       });
     } catch (e) {
-      toast.error("Sikertelen hozzáadás!", {
+      toast.error("Kategória hozzáadása sikertelen!", {
         position: "top-left",
       });
     }
