@@ -20,8 +20,14 @@ class Menu extends Component {
 
     return (
       <React.Fragment>
-        <Logo />
-        <Contact />
+        <div className="row">
+          <div className="col-xl-6 col-6">
+            <Logo />
+          </div>
+          <div className="col-xl-6 col-6">
+            <Contact />
+          </div>
+        </div>
         <MenuBoard types={types} />
       </React.Fragment>
     );
