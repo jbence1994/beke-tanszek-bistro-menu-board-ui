@@ -1,13 +1,30 @@
 import React, { Component } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+
+import Menu from "./pages/menu";
+import Admin from "./pages/admin";
 
 import "./App.css";
 
 class App extends Component {
+  state = {
+    routes: {
+      menu: "/",
+      admin: "/admin",
+    },
+  };
   render() {
+    const { routes } = this.state;
+
     return (
       <BrowserRouter>
-        <h1>Béke Tanszék Bistro</h1>
+        <main className="container">
+          <Switch>
+            <Route exact path={routes.menu} component={Menu} />
+            <Route exact path={routes.admin} component={Admin} />
+            <Redirect to="/" />
+          </Switch>
+        </main>
       </BrowserRouter>
     );
   }
