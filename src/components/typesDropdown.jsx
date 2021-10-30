@@ -14,20 +14,17 @@ class TypesDropdown extends Component {
     this.setState({ types: data });
   }
 
-  handleChange = () => {
-    console.log("Changed...");
-  };
-
   render() {
     const { types } = this.state;
+    const { onChange } = this.props;
 
     return (
       <Dropdown
         labelText="Kategóriák"
-        name="types"
+        name="typeId"
         errorMessage="Kategória megadása kötelező!"
         data={types}
-        onChange={this.handleChange}
+        onChange={onChange}
       />
     );
   }
