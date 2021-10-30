@@ -15,10 +15,10 @@ class Admin extends Component {
       <React.Fragment>
         <h1 className="p-3 text-center">{pageName}</h1>
         <div className="row">
-          <div className="col-12 mt-3">
+          <div className="col-12 mt-5">
             <AddTypeForm />
           </div>
-          <div className="col-12 mt-3">
+          <div className="col-12 mt-5">
             <AddMealForm />
           </div>
         </div>

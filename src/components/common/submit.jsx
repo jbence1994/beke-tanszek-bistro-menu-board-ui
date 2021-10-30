@@ -2,9 +2,13 @@ import React, { Component } from "react";
 
 class Submit extends Component {
   render() {
-    const { text } = this.props;
+    const { text, onSubmit } = this.props;
 
-    return <button className="btn btn-info">{text}</button>;
+    return (
+      <button className="btn btn-info" onClick={onSubmit}>
+        {text}
+      </button>
+    );
   }
 }
 

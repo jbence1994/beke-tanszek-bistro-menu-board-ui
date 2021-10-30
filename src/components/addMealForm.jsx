@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import TextInput from "./common/textInput";
 import Submit from "./common/submit";
@@ -18,8 +20,26 @@ class AddMealForm extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { meal } = this.state;
-    const { data } = await createMeal(meal);
+    try {
+      const { meal } = this.state;
+      const { data } = await createMeal(meal);
+
+      const { name: mealName } = data;
+
+      const { type } = data;
+      const { name: typeName } = type;
+
+      toast.success(
+        `${mealName} sikeresen hozzáadva a ${typeName} kategóriához!`,
+        {
+          position: "top-left",
+        }
+      );
+    } catch (e) {
+      toast.error("Sikertelen hozzáadás!", {
+        position: "top-left",
+      });
+    }
   };
 
   handleTextChange = ({ currentTarget: input }) => {
@@ -40,7 +60,7 @@ class AddMealForm extends Component {
 
     return (
       <React.Fragment>
-        <form onSubmit={this.handleSubmit} noValidate>
+        <form noValidate>
           <TextInput
             labelText="Étel neve"
             name="name"
@@ -49,8 +69,9 @@ class AddMealForm extends Component {
             onChange={this.handleTextChange}
           />
           <TypesDropdown onChange={this.handleNumberChange} />
-          <Submit text="Mentés" />
+          <Submit text="Mentés" onSubmit={this.handleSubmit} />
         </form>
+        <ToastContainer autoClose={3000} />
       </React.Fragment>
     );
   }

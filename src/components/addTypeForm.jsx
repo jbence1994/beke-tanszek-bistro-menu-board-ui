@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import TextInput from "./common/textInput";
 import Submit from "./common/submit";
@@ -16,8 +18,18 @@ class AddTypeForm extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { type } = this.state;
-    const { data } = await createType(type);
+    try {
+      const { type } = this.state;
+      const { data } = await createType(type);
+      const { name } = data;
+      toast.success(`${name} kategória sikeresen hozzáadva!`, {
+        position: "top-left",
+      });
+    } catch (e) {
+      toast.error("Sikertelen hozzáadás!", {
+        position: "top-left",
+      });
+    }
   };
 
   handleChange = ({ currentTarget: input }) => {
@@ -31,16 +43,19 @@ class AddTypeForm extends Component {
     const { name } = type;
 
     return (
-      <form onSubmit={this.handleSubmit} noValidate>
-        <TextInput
-          labelText="Kategória neve"
-          name="name"
-          value={name}
-          errorMessage="Kategória nevének megadása kötelező!"
-          onChange={this.handleChange}
-        />
-        <Submit text="Mentés" />
-      </form>
+      <React.Fragment>
+        <form noValidate>
+          <TextInput
+            labelText="Kategória neve"
+            name="name"
+            value={name}
+            errorMessage="Kategória nevének megadása kötelező!"
+            onChange={this.handleChange}
+          />
+          <Submit text="Mentés" onSubmit={this.handleSubmit} />
+        </form>
+        <ToastContainer autoClose={3000} />
+      </React.Fragment>
     );
   }
 }
