@@ -1,15 +1,24 @@
 import React, { Component } from "react";
 
-import getTypes from "../services/typeService";
+import { getTypesWithMeals } from "../services/typeService";
 
 class MenuBoard extends Component {
   state = {
     types: [],
   };
 
-  componentDidMount() {
-    this.setState({ types: getTypes() });
+  async componentDidMount() {
+    const { data } = await getTypesWithMeals();
+    this.setState({ types: data });
   }
+
+  renderMeals = (meals) => {
+    if (!meals) {
+      return;
+    }
+
+    return meals.map(({ id, name }) => <h2 key={id}>{name}</h2>);
+  };
 
   render() {
     const { types } = this.state;
@@ -19,9 +28,7 @@ class MenuBoard extends Component {
         {types.map(({ id, name, meals }) => (
           <article className="col-2 m-3" key={id}>
             <h1>{name}</h1>
-            {meals.map(({ id, name }) => (
-              <h2 key={id}>{name}</h2>
-            ))}
+            {this.renderMeals(meals)}
           </article>
         ))}
       </section>
