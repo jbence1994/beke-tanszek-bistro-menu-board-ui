@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 
+import getTypes from "../services/typeService";
+
 class MenuBoard extends Component {
+  state = {
+    types: [],
+  };
+
+  componentDidMount() {
+    this.setState({ types: getTypes() });
+  }
+
   render() {
-    const { types } = this.props;
+    const { types } = this.state;
 
     return (
       <section>
