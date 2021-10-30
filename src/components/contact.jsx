@@ -15,7 +15,7 @@ class Contact extends Component {
     const { name, address, phone, fax } = companyInfo;
 
     return (
-      <div className="text-center">
+      <div className="p-3 text-center">
         <h3>Üzemeltető:</h3>
         <h3>{name}</h3>
         <h3>{address}</h3>

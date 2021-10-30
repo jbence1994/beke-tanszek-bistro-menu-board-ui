@@ -6,6 +6,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
     {
@@ -14,6 +17,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
     {
@@ -22,6 +28,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
     {
@@ -30,6 +39,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
     {
@@ -38,6 +50,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
     {
@@ -46,6 +61,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
     {
@@ -54,6 +72,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
     {
@@ -62,6 +83,9 @@ const getTypes = () => {
       meals: [
         { id: 1, name: "Meal #1" },
         { id: 2, name: "Meal #2" },
+        { id: 3, name: "Meal #3" },
+        { id: 4, name: "Meal #4" },
+        { id: 5, name: "Meal #5" },
       ],
     },
   ];
