@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import getTypes from "../services/typeService";
+import getTypes from "../services/fakeTypeService";
 
 class MenuBoard extends Component {
   state = {
