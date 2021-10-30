@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class TextInput extends Component {
   render() {
-    const { labelText, name, value, errorMessage, onChange } = this.props;
+    const { labelText, name, value, onChange } = this.props;
     return (
       <React.Fragment>
         <div className="form-group">
@@ -16,9 +16,6 @@ class TextInput extends Component {
             onChange={onChange}
           />
         </div>
-        {errorMessage && (
-          <div className="alert alert-warning">{errorMessage}</div>
-        )}
       </React.Fragment>
     );
   }

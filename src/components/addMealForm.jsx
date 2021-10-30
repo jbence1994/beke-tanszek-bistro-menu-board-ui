@@ -14,7 +14,6 @@ class AddMealForm extends Component {
       name: "",
       typeId: 0,
     },
-    errorMessage: "",
   };
 
   handleSubmit = async (e) => {
@@ -65,7 +64,6 @@ class AddMealForm extends Component {
             labelText="Étel neve"
             name="name"
             value={name}
-            errorMessage="Étel nevének megadása kötelező!"
             onChange={this.handleTextChange}
           />
           <TypesDropdown onChange={this.handleNumberChange} />

@@ -12,7 +12,6 @@ class AddTypeForm extends Component {
     type: {
       name: "",
     },
-    errorMessage: "",
   };
 
   handleSubmit = async (e) => {
@@ -22,6 +21,7 @@ class AddTypeForm extends Component {
       const { type } = this.state;
       const { data } = await createType(type);
       const { name } = data;
+
       toast.success(`${name} kategória sikeresen hozzáadva!`, {
         position: "top-left",
       });
@@ -49,7 +49,6 @@ class AddTypeForm extends Component {
             labelText="Kategória neve"
             name="name"
             value={name}
-            errorMessage="Kategória nevének megadása kötelező!"
             onChange={this.handleChange}
           />
           <Submit text="Mentés" onSubmit={this.handleSubmit} />

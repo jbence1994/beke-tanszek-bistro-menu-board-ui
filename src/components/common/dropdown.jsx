@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 
 class Dropdown extends Component {
-  state = {};
-
   render() {
-    const { labelText, name, errorMessage, data, onChange } = this.props;
+    const { labelText, name, data, onChange } = this.props;
 
     return (
       <React.Fragment>
@@ -24,9 +22,6 @@ class Dropdown extends Component {
             ))}
           </select>
         </div>
-        {errorMessage && (
-          <div className="alert alert-warning">{errorMessage}</div>
-        )}
       </React.Fragment>
     );
   }
