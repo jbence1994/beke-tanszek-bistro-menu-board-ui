@@ -32,22 +32,14 @@ class AddTypeForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit} noValidate>
-        <div className="row">
-          <div className="col-6">
-            <TextInput
-              labelText="Kategória neve"
-              name="name"
-              value={name}
-              errorMessage="Kategória nevének megadása kötelező!"
-              onChange={this.handleChange}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <Submit text="Mentés" />
-          </div>
-        </div>
+        <TextInput
+          labelText="Kategória neve"
+          name="name"
+          value={name}
+          errorMessage="Kategória nevének megadása kötelező!"
+          onChange={this.handleChange}
+        />
+        <Submit text="Mentés" />
       </form>
     );
   }
