@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Board extends Component {
+class MenuBoard extends Component {
   render() {
     const { types } = this.props;
 
@@ -19,4 +19,4 @@ class Board extends Component {
   }
 }
 
-export default Board;
+export default MenuBoard;

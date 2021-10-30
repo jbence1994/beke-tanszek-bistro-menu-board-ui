@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import Board from "../components/board";
 import Logo from "../components/logo";
+import MenuBoard from "../components/menuBoard";
 
 class Menu extends Component {
   state = {
@@ -80,7 +80,7 @@ class Menu extends Component {
     return (
       <React.Fragment>
         <Logo />
-        <Board types={types} />
+        <MenuBoard types={types} />
       </React.Fragment>
     );
   }
