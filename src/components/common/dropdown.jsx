@@ -25,7 +25,7 @@ class Dropdown extends Component {
           </select>
         </div>
         {errorMessage && (
-          <div className="alert alert-danger">{errorMessage}</div>
+          <div className="alert alert-warning">{errorMessage}</div>
         )}
       </React.Fragment>
     );

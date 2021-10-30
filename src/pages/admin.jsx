@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import AddTypeForm from "../components/addTypeForm";
+
 class Admin extends Component {
   state = {
     pageName: "Admin felület",
@@ -10,7 +12,8 @@ class Admin extends Component {
 
     return (
       <React.Fragment>
-        <h1 className="text-center">{pageName}</h1>
+        <h1 className="p-3 text-center">{pageName}</h1>
+        <AddTypeForm />
       </React.Fragment>
     );
   }

@@ -17,7 +17,7 @@ class TextInput extends Component {
           />
         </div>
         {errorMessage && (
-          <div className="alert alert-danger">{errorMessage}</div>
+          <div className="alert alert-warning">{errorMessage}</div>
         )}
       </React.Fragment>
     );
