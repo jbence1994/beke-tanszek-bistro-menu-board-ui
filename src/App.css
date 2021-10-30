@@ -3,8 +3,5 @@
 main {
   background-color: rgb(85, 62, 44);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
   color: wheat;
 }
