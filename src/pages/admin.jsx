@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import AddTypeForm from "../components/addTypeForm";
+import AddMealForm from "../components/addMealForm";
 
 class Admin extends Component {
   state = {
@@ -13,7 +14,14 @@ class Admin extends Component {
     return (
       <React.Fragment>
         <h1 className="p-3 text-center">{pageName}</h1>
-        <AddTypeForm />
+        <div className="row">
+          <div className="col-12 mt-3">
+            <AddTypeForm />
+          </div>
+          <div className="col-12 mt-3">
+            <AddMealForm />
+          </div>
+        </div>
       </React.Fragment>
     );
   }
