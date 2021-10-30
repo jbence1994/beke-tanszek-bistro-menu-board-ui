@@ -1,4 +1,5 @@
 {
-  "types": "https://localhost:5001/api/v1/types",
-  "typesWithMeals": "https://localhost:5001/api/v1/types/withMeals"
+  "getTypes": "https://localhost:5001/api/v1/types",
+  "getTypesWithMeals": "https://localhost:5001/api/v1/types/withMeals",
+  "createType": "https://localhost:5001/api/v1/types"
 }

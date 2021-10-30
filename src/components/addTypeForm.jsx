@@ -3,28 +3,32 @@ import React, { Component } from "react";
 import TextInput from "./common/textInput";
 import Submit from "./common/submit";
 
+import { createType } from "../services/typeService";
+
 class AddTypeForm extends Component {
   state = {
-    typeName: "",
+    type: {
+      name: "",
+    },
     errorMessage: "",
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { typeName } = this.state;
-
-    console.log("Submitted", typeName); // Call api ...
+    const { type } = this.state;
+    const { data } = await createType(type);
   };
 
   handleChange = ({ currentTarget: input }) => {
-    const typeName = input.value;
-
-    this.setState({ typeName });
+    const type = { ...this.state.type };
+    type[input.name] = input.value;
+    this.setState({ type });
   };
 
   render() {
-    const { typeName } = this.state;
+    const { type } = this.state;
+    const { name } = type;
 
     return (
       <form onSubmit={this.handleSubmit} noValidate>
@@ -32,8 +36,8 @@ class AddTypeForm extends Component {
           <div className="col-6">
             <TextInput
               labelText="Kategória neve"
-              name="Hello"
-              value={typeName}
+              name="name"
+              value={name}
               errorMessage="Kategória nevének megadása kötelező!"
               onChange={this.handleChange}
             />
