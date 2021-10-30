@@ -18,7 +18,7 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <main className="container">
+        <main className="container-fluid">
           <Switch>
             <Route exact path={routes.menu} component={Menu} />
             <Route exact path={routes.admin} component={Admin} />
