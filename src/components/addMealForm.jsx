@@ -34,6 +34,8 @@ class AddMealForm extends Component {
           position: "top-left",
         }
       );
+
+      setInterval(() => (window.location = "/admin"), 2000);
     } catch (e) {
       toast.error("Étel hozzáadása sikertelen!", {
         position: "top-left",
