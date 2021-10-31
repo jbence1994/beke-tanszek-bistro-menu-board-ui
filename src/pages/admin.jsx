@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
+import AddDailyMenuForm from "../components/addDailyMenuForm";
+import DeleteDailyMenusForm from "../components/deleteDailyMenusForm";
 import AddTypeForm from "../components/addTypeForm";
 import AddMealForm from "../components/addMealForm";
-import AddDailyMenuForm from "../components/addDailyMenuForm";
 
 class Admin extends Component {
   state = {
@@ -18,6 +19,9 @@ class Admin extends Component {
         <div className="row">
           <div className="col-12 mt-5">
             <AddDailyMenuForm />
+          </div>
+          <div className="col-12 mt-5">
+            <DeleteDailyMenusForm />
           </div>
           <div className="col-12 mt-5">
             <AddTypeForm />
