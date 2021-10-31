@@ -12,9 +12,4 @@ const getTypesWithMeals = async () => {
   return await restClient.get(endpoint);
 };
 
-const createType = async (type) => {
-  const endpoint = endpoints.createType;
-  return await restClient.post(endpoint, type);
-};
-
-export { getTypes, getTypesWithMeals, createType };
+export { getTypes, getTypesWithMeals };
