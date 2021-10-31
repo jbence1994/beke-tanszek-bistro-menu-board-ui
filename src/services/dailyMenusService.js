@@ -7,4 +7,9 @@ const getDailyMenus = async () => {
   return await restClient.get(endpoint);
 };
 
-export { getDailyMenus };
+const createDailyMenu = async (dailyMenu) => {
+  const endpoint = endpoints.createDailyMenu;
+  return await restClient.post(endpoint, dailyMenu);
+};
+
+export { getDailyMenus, createDailyMenu };
