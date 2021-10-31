@@ -43,7 +43,7 @@ class AddDailyMenuForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Napi menü összeállítása</h2>
+        <h2>Étel rögzítése a napi menübe</h2>
         <form noValidate>
           <MealsDropdown onChange={this.handleNumberChange} />
           <Button

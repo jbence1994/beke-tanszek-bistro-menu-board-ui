@@ -59,7 +59,7 @@ class AddMealForm extends Component {
 
     return (
       <React.Fragment>
-        <h2>Új étel rögzítése kategóriával</h2>
+        <h2>Új étel rögzítése az adatbázisba</h2>
         <form noValidate>
           <TextInput
             labelText="Étel neve"
