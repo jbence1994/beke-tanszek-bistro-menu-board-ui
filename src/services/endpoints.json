@@ -2,5 +2,8 @@
   "getTypes": "https://localhost:5001/api/v1/types",
   "getTypesWithMeals": "https://localhost:5001/api/v1/types/withMeals",
   "createType": "https://localhost:5001/api/v1/types",
-  "createMeal": "https://localhost:5001/api/v1/meals"
+  "getMeals": "https://localhost:5001/api/v1/meals",
+  "createMeal": "https://localhost:5001/api/v1/meals",
+  "deleteMeals": "https://localhost:5001/api/v1/meals",
+  "deleteMealById": "https://localhost:5001/api/v1/meals"
 }

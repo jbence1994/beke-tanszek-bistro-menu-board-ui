@@ -22,7 +22,6 @@ class TypesDropdown extends Component {
       <Dropdown
         labelText="Kategóriák"
         name="typeId"
-        errorMessage="Kategória megadása kötelező!"
         data={types}
         onChange={onChange}
       />
