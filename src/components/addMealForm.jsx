@@ -33,7 +33,7 @@ class AddMealForm extends Component {
           position: "top-left",
         }
       );
-      setInterval(() => window.location.reload(), 2000);
+      setInterval(() => window.location.reload(), 1000);
     } catch (e) {
       toast.error("Étel hozzáadása sikertelen!", {
         position: "top-left",

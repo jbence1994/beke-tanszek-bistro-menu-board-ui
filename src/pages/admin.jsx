@@ -21,7 +21,7 @@ class Admin extends Component {
             <DeleteMealsForm />
           </div>
         </div>
-        <ToastContainer autoClose={2000} />
+        <ToastContainer autoClose={1000} />
       </div>
     );
   }

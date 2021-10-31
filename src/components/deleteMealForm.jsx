@@ -27,7 +27,7 @@ class DeleteMealForm extends Component {
       toast.success(`${name} törlése a napi menüből sikeres!`, {
         position: "top-left",
       });
-      setInterval(() => window.location.reload(), 2000);
+      setInterval(() => window.location.reload(), 1000);
     } catch (e) {
       toast.error("Étel törlése a napi menüből sikertelen!", {
         position: "top-left",
