@@ -7,7 +7,7 @@ import Submit from "./common/submit";
 
 import { createDailyMenu } from "../services/dailyMenusService";
 
-class DailyMenuForm extends Component {
+class AddDailyMenuForm extends Component {
   state = {
     dailyMenu: {
       mealId: 0,
@@ -54,4 +54,4 @@ class DailyMenuForm extends Component {
   }
 }
 
-export default DailyMenuForm;
+export default AddDailyMenuForm;
