@@ -12,7 +12,7 @@ class Admin extends Component {
     const { pageName } = this.state;
 
     return (
-      <React.Fragment>
+      <div className="container">
         <h1 className="p-3 text-center">{pageName}</h1>
         <div className="row">
           <div className="col-12 mt-5">
@@ -22,7 +22,7 @@ class Admin extends Component {
             <AddMealForm />
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
