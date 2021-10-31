@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 import MealsDropdown from "./mealsDropdown";
 import Button from "./common/button";
 
 import { createDailyMenu } from "../services/dailyMenusService";
+
+import "react-toastify/dist/ReactToastify.css";
 
 class AddDailyMenuForm extends Component {
   state = {
@@ -52,7 +53,6 @@ class AddDailyMenuForm extends Component {
             text="Mentés"
           />
         </form>
-        <ToastContainer autoClose={2000} />
       </React.Fragment>
     );
   }

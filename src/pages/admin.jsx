@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ToastContainer } from "react-toastify";
 
 import AddDailyMenuForm from "../components/addDailyMenuForm";
 import DeleteDailyMenusForm from "../components/deleteDailyMenusForm";
@@ -20,6 +21,7 @@ class Admin extends Component {
             <DeleteDailyMenusForm />
           </div>
         </div>
+        <ToastContainer autoClose={2000} />
       </div>
     );
   }

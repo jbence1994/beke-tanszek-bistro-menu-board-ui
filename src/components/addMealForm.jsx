@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 import TextInput from "./common/textInput";
 import Button from "./common/button";
+import TypesDropdown from "./typesDropdown";
+
+import "react-toastify/dist/ReactToastify.css";
 
 import { createMeal } from "../services/mealService";
-import TypesDropdown from "./typesDropdown";
 
 class AddMealForm extends Component {
   state = {
@@ -76,7 +77,6 @@ class AddMealForm extends Component {
             text="Mentés"
           />
         </form>
-        <ToastContainer autoClose={2000} />
       </React.Fragment>
     );
   }
