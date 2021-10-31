@@ -5,7 +5,7 @@ import AddMealForm from "../components/addMealForm";
 
 class Admin extends Component {
   state = {
-    pageName: "Admin felület",
+    pageName: "Admin",
   };
 
   render() {
