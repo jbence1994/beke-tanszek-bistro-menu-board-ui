@@ -44,6 +44,7 @@ class AddTypeForm extends Component {
 
     return (
       <React.Fragment>
+        <h2>Új kateógria rögzítése</h2>
         <form noValidate>
           <TextInput
             labelText="Kategória neve"
