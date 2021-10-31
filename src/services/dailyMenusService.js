@@ -12,4 +12,9 @@ const createDailyMenu = async (dailyMenu) => {
   return await restClient.post(endpoint, dailyMenu);
 };
 
-export { getDailyMenus, createDailyMenu };
+const deleteDailyMenus = () => {
+  const endpoint = endpoints.deleteDailyMenus;
+  return restClient.delete(endpoint);
+};
+
+export { getDailyMenus, createDailyMenu, deleteDailyMenus };
