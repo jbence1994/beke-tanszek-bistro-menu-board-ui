@@ -20,10 +20,10 @@ class Admin extends Component {
             <AddDailyMenuForm />
           </div>
           <div className="col-12 mt-5">
-            <DeleteDailyMenusForm />
+            <AddMealForm />
           </div>
           <div className="col-12 mt-5">
-            <AddMealForm />
+            <DeleteDailyMenusForm />
           </div>
         </div>
       </div>
