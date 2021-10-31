@@ -14,7 +14,7 @@ class Dropdown extends Component {
             name={name}
             onChange={onChange}
           >
-            <option value={0}></option>
+            <option value={0}>Kérem válasszon a legördülő listából...</option>
             {data.map(({ id, name }) => (
               <option key={id} value={id}>
                 {name}
