@@ -32,7 +32,7 @@ class DeleteDailyMenusForm extends Component {
             text="Teljes napi menü törlése"
           />
         </form>
-        <ToastContainer autoClose={3000} />
+        <ToastContainer autoClose={2000} />
       </React.Fragment>
     );
   }

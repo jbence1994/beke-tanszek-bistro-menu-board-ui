@@ -58,7 +58,7 @@ class AddTypeForm extends Component {
             text="Mentés"
           />
         </form>
-        <ToastContainer autoClose={3000} />
+        <ToastContainer autoClose={2000} />
       </React.Fragment>
     );
   }
