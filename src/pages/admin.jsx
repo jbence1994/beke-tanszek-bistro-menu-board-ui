@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { ToastContainer } from "react-toastify";
 
-import AddDailyMenuForm from "../components/addDailyMenuForm";
-import DeleteDailyMenusForm from "../components/deleteDailyMenusForm";
 import AddMealForm from "../components/addMealForm";
+import DeleteMealForm from "../components/deleteMealForm";
+import DeleteMealsForm from "../components/deleteMealsForm";
 
 class Admin extends Component {
   render() {
@@ -12,13 +12,13 @@ class Admin extends Component {
         <h1 className="p-3 text-center">Napi menü összeállítása</h1>
         <div className="row">
           <div className="col-12 mt-5">
-            <AddDailyMenuForm />
-          </div>
-          <div className="col-12 mt-5">
             <AddMealForm />
           </div>
           <div className="col-12 mt-5">
-            <DeleteDailyMenusForm />
+            <DeleteMealForm />
+          </div>
+          <div className="col-12 mt-5">
+            <DeleteMealsForm />
           </div>
         </div>
         <ToastContainer autoClose={2000} />

@@ -12,14 +12,14 @@ const createMeal = async (meal) => {
   return await restClient.post(endpoint, meal);
 };
 
-const deleteMeals = async () => {
-  const endpoint = endpoints.deleteMeals;
-  return await restClient.delete(endpoint);
-};
-
 const deleteMeal = async (id) => {
   const endpoint = `${endpoints.deleteMealById}/${id}`;
   return await restClient.delete(endpoint, id);
+};
+
+const deleteMeals = async () => {
+  const endpoint = endpoints.deleteMeals;
+  return await restClient.delete(endpoint);
 };
 
 export { getMeals, createMeal, deleteMeals, deleteMeal };

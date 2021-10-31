@@ -4,7 +4,6 @@
   "createType": "https://localhost:5001/api/v1/types",
   "getMeals": "https://localhost:5001/api/v1/meals",
   "createMeal": "https://localhost:5001/api/v1/meals",
-  "getDailyMenus": "https://localhost:5001/api/v1/dailyMenus",
-  "createDailyMenu": "https://localhost:5001/api/v1/dailyMenus",
-  "deleteDailyMenus": "https://localhost:5001/api/v1/dailyMenus"
+  "deleteMeals": "https://localhost:5001/api/v1/meals",
+  "deleteMealById": "https://localhost:5001/api/v1/meals"
 }

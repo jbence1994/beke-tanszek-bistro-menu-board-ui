@@ -23,20 +23,17 @@ class AddMealForm extends Component {
     try {
       const { meal } = this.state;
       const { data } = await createMeal(meal);
-
       const { name: mealName } = data;
-
       const { type } = data;
       const { name: typeName } = type;
 
       toast.success(
-        `${mealName} sikeresen hozzáadva a ${typeName} kategóriához!`,
+        `${mealName} sikeresen hozzáadva a ${typeName} kategóriában a napi menühöz!`,
         {
           position: "top-left",
         }
       );
-
-      setInterval(() => (window.location = "/admin"), 2000);
+      setInterval(() => window.location.reload(), 2000);
     } catch (e) {
       toast.error("Étel hozzáadása sikertelen!", {
         position: "top-left",
@@ -62,7 +59,7 @@ class AddMealForm extends Component {
 
     return (
       <React.Fragment>
-        <h2>Új étel rögzítése az adatbázisba</h2>
+        <h2>Új étel rögzítése a napi menübe</h2>
         <form noValidate>
           <TextInput
             labelText="Étel neve"
@@ -74,7 +71,7 @@ class AddMealForm extends Component {
           <Button
             classes="btn btn-info"
             onSubmit={this.handleSubmit}
-            text="Mentés"
+            text="Étel rögzítése"
           />
         </form>
       </React.Fragment>

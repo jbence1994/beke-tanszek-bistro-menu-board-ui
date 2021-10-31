@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Button from "./common/button";
 
-import { deleteDailyMenus } from "../services/dailyMenusService";
+import { deleteMeals } from "../services/mealService";
 
-class DeleteDailyMenusForm extends Component {
+class DeleteMealsForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
     try {
-      deleteDailyMenus();
-      toast.success(`Sikeresen törölte a napi menüt!`, {
+      deleteMeals();
+      toast.success(`Sikeresen törölte a teljes napi menüt!`, {
         position: "top-left",
       });
     } catch (e) {
-      toast.error("Napi menü törlése sikertelen!", {
+      toast.error("Napi menü teljes törlése sikertelen!", {
         position: "top-left",
       });
     }
@@ -32,10 +32,9 @@ class DeleteDailyMenusForm extends Component {
             text="Teljes napi menü törlése"
           />
         </form>
-        <ToastContainer autoClose={2000} />
       </React.Fragment>
     );
   }
 }
 
-export default DeleteDailyMenusForm;
+export default DeleteMealsForm;

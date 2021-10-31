@@ -4,13 +4,13 @@ import { toast } from "react-toastify";
 import MealsDropdown from "./mealsDropdown";
 import Button from "./common/button";
 
-import { createDailyMenu } from "../services/dailyMenusService";
-
 import "react-toastify/dist/ReactToastify.css";
 
-class AddDailyMenuForm extends Component {
+import { deleteMeal } from "../services/mealService";
+
+class DeleteMealForm extends Component {
   state = {
-    dailyMenu: {
+    meal: {
       mealId: 0,
     },
   };
@@ -19,38 +19,38 @@ class AddDailyMenuForm extends Component {
     e.preventDefault();
 
     try {
-      const { dailyMenu } = this.state;
-      const { data } = await createDailyMenu(dailyMenu);
+      const { meal } = this.state;
+      const { mealId } = meal;
+      const { data } = await deleteMeal(mealId);
+      const { name } = data;
 
-      const { meal } = data;
-      const { name: mealName } = meal;
-
-      toast.success(`${mealName} sikeresen hozzáadva a napi menühöz!`, {
+      toast.success(`${name} törlése a napi menüből sikeres!`, {
         position: "top-left",
       });
+      setInterval(() => window.location.reload(), 2000);
     } catch (e) {
-      toast.error("Étel hozzáadása a napi menühöz sikertelen!", {
+      toast.error("Étel törlése a napi menüből sikertelen!", {
         position: "top-left",
       });
     }
   };
 
   handleNumberChange = ({ currentTarget: input }) => {
-    const dailyMenu = { ...this.state.dailyMenu };
-    dailyMenu[input.name] = parseInt(input.value);
-    this.setState({ dailyMenu });
+    const meal = { ...this.state.meal };
+    meal[input.name] = parseInt(input.value);
+    this.setState({ meal });
   };
 
   render() {
     return (
       <React.Fragment>
-        <h2>Étel rögzítése a napi menübe</h2>
+        <h2>Étel törlése a napi menüből</h2>
         <form noValidate>
           <MealsDropdown onChange={this.handleNumberChange} />
           <Button
-            classes="btn btn-info"
+            classes="btn btn-danger"
             onSubmit={this.handleSubmit}
-            text="Mentés"
+            text="Étel törlése"
           />
         </form>
       </React.Fragment>
@@ -58,4 +58,4 @@ class AddDailyMenuForm extends Component {
   }
 }
 
-export default AddDailyMenuForm;
+export default DeleteMealForm;
