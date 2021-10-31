@@ -12,4 +12,4 @@ const createMeal = async (meal) => {
   return await restClient.post(endpoint, meal);
 };
 
-export { createMeal };
+export { getMeals, createMeal };
