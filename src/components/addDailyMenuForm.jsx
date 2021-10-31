@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import MealsDropdown from "./mealsDropdown";
-import Submit from "./common/submit";
+import Button from "./common/button";
 
 import { createDailyMenu } from "../services/dailyMenusService";
 
@@ -46,7 +46,11 @@ class AddDailyMenuForm extends Component {
         <h2>Napi menü összeállítása</h2>
         <form noValidate>
           <MealsDropdown onChange={this.handleNumberChange} />
-          <Submit text="Mentés" onSubmit={this.handleSubmit} />
+          <Button
+            classes="btn btn-info"
+            onSubmit={this.handleSubmit}
+            text="Mentés"
+          />
         </form>
         <ToastContainer autoClose={3000} />
       </React.Fragment>

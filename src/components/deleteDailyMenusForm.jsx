@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import DeleteButton from "./common/deleteButton";
+import Button from "./common/button";
 
 import { deleteDailyMenus } from "../services/dailyMenusService";
 
@@ -11,7 +11,7 @@ class DeleteDailyMenusForm extends Component {
     e.preventDefault();
 
     try {
-      const response = deleteDailyMenus();
+      deleteDailyMenus();
       toast.success(`Sikeresen törölte a napi menüt!`, {
         position: "top-left",
       });
@@ -26,7 +26,11 @@ class DeleteDailyMenusForm extends Component {
     return (
       <React.Fragment>
         <form noValidate>
-          <DeleteButton text="Napi menü törlése" onSubmit={this.handleSubmit} />
+          <Button
+            classes="btn btn-danger"
+            onSubmit={this.handleSubmit}
+            text="Teljes napi menü törlése"
+          />
         </form>
         <ToastContainer autoClose={3000} />
       </React.Fragment>
