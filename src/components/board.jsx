@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
+import getCurrentDate from "../services/dateService";
 import { getTypesWithMeals } from "../services/typeService";
 
-class Board extends Component {
+class MenuBoard extends Component {
   state = {
     types: [],
   };
@@ -17,23 +18,34 @@ class Board extends Component {
       return;
     }
 
-    return meals.map(({ id, name }) => <h2 key={id}>{name}</h2>);
+    return meals.map(({ id, name, price }) => (
+      <React.Fragment>
+        <h3 key={id}>
+          &#8226; {name} ..... {price}.-
+        </h3>
+      </React.Fragment>
+    ));
   };
 
   render() {
     const { types } = this.state;
 
     return (
-      <section className="mt-5 row text-center">
+      <React.Fragment>
+        <article className="col-12">
+          <h1 className="text-center mt-3 mb-5">
+            Napi menü {getCurrentDate()}
+          </h1>
+        </article>
         {types.map(({ id, name, meals }) => (
-          <article className="col-2 m-3" key={id}>
-            <h1>{name}</h1>
+          <article className="text-center p-2 col-3" key={id}>
+            <h2>{name}</h2>
             {this.renderMeals(meals)}
           </article>
         ))}
-      </section>
+      </React.Fragment>
     );
   }
 }
 
-export default Board;
+export default MenuBoard;
