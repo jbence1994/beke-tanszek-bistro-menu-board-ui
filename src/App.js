@@ -7,21 +7,13 @@ import Admin from "./pages/admin";
 import "./App.css";
 
 class App extends Component {
-  state = {
-    routes: {
-      menu: "/",
-      admin: "/admin",
-    },
-  };
   render() {
-    const { routes } = this.state;
-
     return (
       <BrowserRouter>
         <main className="container-fluid">
           <Switch>
-            <Route exact path={routes.menu} component={Menu} />
-            <Route exact path={routes.admin} component={Admin} />
+            <Route exact path="/admin" component={Admin} />
+            <Route exact path="/" component={Menu} />
             <Redirect to="/" />
           </Switch>
         </main>
