@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { toast } from "react-toastify";
 
 import TextInput from "./common/textInput";
+import NumberInput from "./common/numberInput";
 import Button from "./common/button";
 import TypesDropdown from "./typesDropdown";
 
@@ -13,6 +14,7 @@ class AddMealForm extends Component {
   state = {
     meal: {
       name: "",
+      price: 0,
       typeId: 0,
     },
   };
@@ -55,7 +57,7 @@ class AddMealForm extends Component {
 
   render() {
     const { meal } = this.state;
-    const { name } = meal;
+    const { name, price } = meal;
 
     return (
       <React.Fragment>
@@ -66,6 +68,12 @@ class AddMealForm extends Component {
             name="name"
             value={name}
             onChange={this.handleTextChange}
+          />
+          <NumberInput
+            labelText="Étel ára"
+            name="price"
+            value={price}
+            onChange={this.handleNumberChange}
           />
           <TypesDropdown onChange={this.handleNumberChange} />
           <Button
