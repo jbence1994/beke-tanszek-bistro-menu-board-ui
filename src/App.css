@@ -2,6 +2,6 @@
 
 main {
   background-color: rgb(85, 62, 44);
-  min-height: 100vh;
   color: wheat;
+  height: 100vh;
 }

@@ -1,22 +1,18 @@
 import React, { Component } from "react";
 
-import Logo from "../components/logo";
-import Contact from "../components/contact";
-import MenuBoard from "../components/menuBoard";
+import Board from "../components/board";
+import Footer from "../components/footer";
 
 class Menu extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="row">
-          <div className="col-xl-6 col-6">
-            <Logo />
-          </div>
-          <div className="col-xl-6 col-6">
-            <Contact />
-          </div>
-        </div>
-        <MenuBoard />
+        <section className="row">
+          <Board />
+        </section>
+        <section className="row fixed-bottom">
+          <Footer />
+        </section>
       </React.Fragment>
     );
   }

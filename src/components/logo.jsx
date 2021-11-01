@@ -5,7 +5,11 @@ import logo from "./logo.png";
 class Logo extends Component {
   render() {
     return (
-      <img className="img-fluid" src={logo} alt="Béke Tanszék Bistro logó" />
+      <img
+        className="mx-auto d-block"
+        src={logo}
+        alt="Béke Tanszék Bistro logó"
+      />
     );
   }
 }
