@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import MenuBoard from "../components/menuBoard";
+import Board from "../components/board";
 import Footer from "../components/footer";
 
 class Menu extends Component {
@@ -8,7 +8,7 @@ class Menu extends Component {
     return (
       <React.Fragment>
         <section className="row">
-          <MenuBoard />
+          <Board />
         </section>
         <section className="row fixed-bottom">
           <Footer />

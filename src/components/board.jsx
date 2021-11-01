@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { getTypesWithMeals } from "../services/typeService";
 
-class MenuBoard extends Component {
+class Board extends Component {
   state = {
     types: [],
   };
@@ -36,4 +36,4 @@ class MenuBoard extends Component {
   }
 }
 
-export default MenuBoard;
+export default Board;
