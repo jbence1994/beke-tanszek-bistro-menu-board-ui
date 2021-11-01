@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
-import Menu from "./pages/menu";
 import Admin from "./pages/admin";
+import Menu from "./pages/menu";
 
 import "./App.css";
 
