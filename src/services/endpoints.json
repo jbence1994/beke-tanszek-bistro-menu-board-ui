@@ -1,9 +1,10 @@
 {
-  "getTypes": "https://localhost:5001/api/v1/types",
-  "getTypesWithMeals": "https://localhost:5001/api/v1/types/withMeals",
-  "createType": "https://localhost:5001/api/v1/types",
-  "getMeals": "https://localhost:5001/api/v1/meals",
-  "createMeal": "https://localhost:5001/api/v1/meals",
-  "deleteMeals": "https://localhost:5001/api/v1/meals",
-  "deleteMealById": "https://localhost:5001/api/v1/meals"
+  "base": "http://192.168.88.243:3001",
+  "getTypes": "/api/v1/types",
+  "getTypesWithMeals": "/api/v1/types/withMeals",
+  "createType": "/api/v1/types",
+  "getMeals": "/api/v1/meals",
+  "createMeal": "/api/v1/meals",
+  "deleteMeals": "/api/v1/meals",
+  "deleteMealById": "/api/v1/meals"
 }
