@@ -33,12 +33,12 @@ class MenuBoard extends Component {
     return (
       <React.Fragment>
         <article className="col-12">
-          <h1 className="text-center mt-3 mb-5">
+          <h1 className="text-center mt-5 mb-5">
             Napi menü {getCurrentDate()}
           </h1>
         </article>
         {types.map(({ id, name, meals }) => (
-          <article className="text-center p-2 col-3" key={id}>
+          <article className="text-center p-3 col-3" key={id}>
             <h2>{name}</h2>
             {this.renderMeals(meals)}
           </article>
