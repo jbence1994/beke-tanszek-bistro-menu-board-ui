@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -6,8 +6,8 @@ import Button from "./common/button";
 
 import { deleteMeals } from "../services/mealService";
 
-class DeleteMealsForm extends Component {
-  handleSubmit = (e) => {
+const DeleteMealsForm = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     try {
@@ -23,19 +23,17 @@ class DeleteMealsForm extends Component {
     }
   };
 
-  render() {
-    return (
-      <React.Fragment>
-        <form noValidate>
-          <Button
-            classes="btn btn-danger"
-            onSubmit={this.handleSubmit}
-            text="Teljes napi menü törlése"
-          />
-        </form>
-      </React.Fragment>
-    );
-  }
-}
+  return (
+    <React.Fragment>
+      <form noValidate>
+        <Button
+          classes="btn btn-danger"
+          onSubmit={handleSubmit}
+          text="Teljes napi menü törlése"
+        />
+      </form>
+    </React.Fragment>
+  );
+};
 
 export default DeleteMealsForm;
