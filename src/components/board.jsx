@@ -19,11 +19,9 @@ class Board extends Component {
     }
 
     return meals.map(({ id, name, price }) => (
-      <React.Fragment>
-        <h3 key={id}>
-          &#8226; {name} ..... {price}.-
-        </h3>
-      </React.Fragment>
+      <h3 key={id}>
+        &#8226; {name} ..... {price}.-
+      </h3>
     ));
   };
 
