@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import getCurrentDate from "../services/dateService";
 import { getCategoriesWithMeals } from "../services/categoryService";
 
-class MenuBoard extends Component {
+class Board extends Component {
   state = {
     categories: [],
   };
@@ -48,4 +48,4 @@ class MenuBoard extends Component {
   }
 }
 
-export default MenuBoard;
+export default Board;
