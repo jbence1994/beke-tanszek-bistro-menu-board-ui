@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
 import getCurrentDate from "../services/dateService";
-import { getTypesWithMeals } from "../services/typeService";
+import { getCategoriesWithMeals } from "../services/categoryService";
 
 class MenuBoard extends Component {
   state = {
-    types: [],
+    categories: [],
   };
 
   async componentDidMount() {
-    const { data } = await getTypesWithMeals();
-    this.setState({ types: data });
+    const { data } = await getCategoriesWithMeals();
+    this.setState({ categories: data });
   }
 
   renderMeals = (meals) => {
@@ -28,7 +28,7 @@ class MenuBoard extends Component {
   };
 
   render() {
-    const { types } = this.state;
+    const { categories } = this.state;
 
     return (
       <React.Fragment>
@@ -37,7 +37,7 @@ class MenuBoard extends Component {
             Napi menü {getCurrentDate()}
           </h1>
         </article>
-        {types.map(({ id, name, meals }) => (
+        {categories.map(({ id, name, meals }) => (
           <article className="text-center p-3 col-3" key={id}>
             <h2>{name}</h2>
             {this.renderMeals(meals)}

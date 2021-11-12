@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import TextInput from "./common/textInput";
 import NumberInput from "./common/numberInput";
 import Button from "./common/button";
-import TypesDropdown from "./typesDropdown";
+import CategoriesDropdown from "./categoriesDropdown";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -15,7 +15,7 @@ class AddMealForm extends Component {
     meal: {
       name: "",
       price: 0,
-      typeId: 0,
+      categoryId: 0,
     },
   };
 
@@ -26,11 +26,11 @@ class AddMealForm extends Component {
       const { meal } = this.state;
       const { data } = await createMeal(meal);
       const { name: mealName } = data;
-      const { type } = data;
-      const { name: typeName } = type;
+      const { category } = data;
+      const { name: categoryName } = category;
 
       toast.success(
-        `${mealName} sikeresen hozzáadva a ${typeName} kategóriában a napi menühöz!`,
+        `${mealName} sikeresen hozzáadva a ${categoryName} kategóriában a napi menühöz!`,
         {
           position: "top-left",
         }
@@ -75,7 +75,7 @@ class AddMealForm extends Component {
             value={price}
             onChange={this.handleNumberChange}
           />
-          <TypesDropdown onChange={this.handleNumberChange} />
+          <CategoriesDropdown onChange={this.handleNumberChange} />
           <Button
             classes="btn btn-info"
             onSubmit={this.handleSubmit}
