@@ -1,8 +1,8 @@
 {
   "base": "http://192.168.88.243:3001",
-  "getTypes": "/api/v1/types",
-  "getTypesWithMeals": "/api/v1/types/withMeals",
-  "createType": "/api/v1/types",
+  "getCategories": "/api/v1/categories",
+  "getCategoriesWithMeals": "/api/v1/categories/withMeals",
+  "createCategory": "/api/v1/categories",
   "getMeals": "/api/v1/meals",
   "createMeal": "/api/v1/meals",
   "deleteMeals": "/api/v1/meals",
