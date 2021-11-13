@@ -7,9 +7,9 @@ class Header extends Component {
     return (
       <header className="col-12">
         <h1 className="text-center mt-5">Napi menü {getCurrentDate()}</h1>
-        <h3 className="text-center mb-5">
+        <h1 className="text-center mb-5">
           Az allergén összetevőkről kérdezze munkatársunkat!
-        </h3>
+        </h1>
       </header>
     );
   }

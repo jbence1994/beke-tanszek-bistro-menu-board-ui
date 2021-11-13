@@ -16,7 +16,7 @@ class Contact extends Component {
     return (
       <div className="text-center mb-5">
         {info.map((element) => (
-          <h3>{element}</h3>
+          <h2>{element}</h2>
         ))}
       </div>
     );

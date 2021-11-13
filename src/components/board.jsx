@@ -18,9 +18,9 @@ class Board extends Component {
     }
 
     return meals.map(({ id, name, price }) => (
-      <h3 key={id}>
+      <h1 key={id}>
         &#8226; {name} ..... {price}.-
-      </h3>
+      </h1>
     ));
   };
 
@@ -31,7 +31,7 @@ class Board extends Component {
       <React.Fragment>
         {categories.map(({ id, name, meals }) => (
           <article className="text-center p-3 col-3" key={id}>
-            <h2>{name}</h2>
+            <h1>{name}</h1>
             {this.renderMeals(meals)}
           </article>
         ))}
