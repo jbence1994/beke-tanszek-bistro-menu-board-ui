@@ -10,17 +10,17 @@ class Admin extends Component {
     return (
       <div className="container">
         <h1 className="p-3 text-center">Napi menü összeállítása</h1>
-        <div className="row">
-          <div className="col-12 mt-5">
+        <section className="row">
+          <article className="col-12 mt-5">
             <AddMealForm />
-          </div>
-          <div className="col-12 mt-5">
+          </article>
+          <article className="col-12 mt-5">
             <DeleteMealForm />
-          </div>
-          <div className="col-12 mt-5">
+          </article>
+          <article className="col-12 mt-5">
             <DeleteMealsForm />
-          </div>
-        </div>
+          </article>
+        </section>
         <ToastContainer autoClose={1000} />
       </div>
     );
